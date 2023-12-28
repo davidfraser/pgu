@@ -106,7 +106,7 @@ class Theme(object):
         if os.path.isfile(fname):
             cfg = ConfigParser()
             f = open(fname, 'r')
-            cfg.readfp(f)
+            cfg.read(f)
             for section in cfg.sections():
                 cls = section
                 pcls = ''
