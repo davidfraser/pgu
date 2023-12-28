@@ -110,8 +110,8 @@ class Isovid(VidPaintUpdateMixin, Vid):
 
         x, y = x*self.iso_w // self.base_w, y*self.iso_h // self.base_h
 
-        #x -= (self.iso_w/2) * h
-        #x -= (self.iso_w/2) * h
+        #x -= (self.iso_w//2) * h
+        #x -= (self.iso_w//2) * h
 
         nx = (x+y)
         ny = y*2-nx

@@ -54,7 +54,7 @@ class Hexvid(VidPaintUpdateMixin, Vid):
         tile_wi = tile_w + tile_w // 2
         tile_wi2 = tile_wi // 2
 
-        #dx += tile_w/2
+        #dx += tile_w//2
 
         for i2 in range(-bot, int(self.view.h // tile_h2 + bot * 3)): #NOTE: 3 seems a bit much, but it works.
             tx, ty = ox + i2 // 2 + i2 % 2, oy + i2 // 2
@@ -87,7 +87,7 @@ class Hexvid(VidPaintUpdateMixin, Vid):
 
     def view_to_tile(self, pos):
         x, y = pos
-        #x = x + (self.tile_w*1/2)
+        #x = x + (self.tile_w*1//2)
 
         x, y = int(x*4/(self.tile_w*3)), y*2 // self.tile_h
         nx = (x + y) // 2
@@ -100,7 +100,7 @@ class Hexvid(VidPaintUpdateMixin, Vid):
         ny = x + y
         nx, ny = int(nx*(self.tile_w*3) // 4), ny*self.tile_h // 2
 
-        #nx = nx - (self.tile_w*1/2)
+        #nx = nx - (self.tile_w*1//2)
         return nx, ny
 
     def screen_to_tile(self, pos): #NOTE HACK : not sure if the 3/8 is right or not, but it is pretty close...

@@ -275,8 +275,8 @@ class Theme(object):
             rect = pygame.Rect(left, top, tilew, tileh)
             dx = width-rect.w
             dy = height-rect.h
-            rect.x += (w.style.align+1)*dx/2
-            rect.y += (w.style.valign+1)*dy/2
+            rect.x += (w.style.align+1)*dx//2
+            rect.y += (w.style.valign+1)*dy//2
 
             w._rect_content = rect
 
@@ -437,7 +437,7 @@ class Theme(object):
 #        desty = y
 
         # Calculate the size of each tile
-        tilew, tileh = int(box.get_width()/3), int(box.get_height()/3)
+        tilew, tileh = int(box.get_width()//3), int(box.get_height()//3)
         xx, yy = x+w, y+h
         src = pygame.rect.Rect(0, 0, tilew, tileh)
         dest = pygame.rect.Rect(0, 0, tilew, tileh)

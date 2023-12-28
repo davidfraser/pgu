@@ -81,10 +81,10 @@ class _slider(widget.Widget):
 
         if adj:
             if self.orient == _SLIDER_HORIZONTAL:
-                d = self.size/2 - (r.w/(self.max-self.min+1))/2
+                d = self.size//2 - (r.w/(self.max-self.min+1))//2
                 self.value = (x-d) * (self.max-self.min) / (r.w-self.size+1) + self.min
             else:
-                d = self.size/2 - (r.h/(self.max-self.min+1))/2
+                d = self.size//2 - (r.h/(self.max-self.min+1))//2
                 self.value = (y-d) * (self.max-self.min) / (r.h-self.size+1) + self.min
                 
         self.pcls = ""

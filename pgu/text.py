@@ -15,8 +15,8 @@ def writec(s,font,color,text,border=1):
     """Write centered text to a surface with a black border"""
     # Center the text within the destination surface
     w,h = font.size(text)
-    x = (s.get_width()-w)/2
-    y = (s.get_height()-h)/2
+    x = (s.get_width()-w)//2
+    y = (s.get_height()-h)//2
     write(s,font,(x,y),color,text,border)
     
 def writepre(s,font,rect,color,text):

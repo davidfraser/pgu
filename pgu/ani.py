@@ -77,5 +77,5 @@ def image_rotate(tv,name,img,shape,angles,diff=0):
             maxx = max(maxx,x2)
             maxy = max(maxy,y2)
         r = pygame.Rect(minx,miny,maxx-minx,maxy-miny)
-        #((ww-w)/2,(hh-h)/2,w,h)
+        #((ww-w)//2,(hh-h)//2,w,h)
         tv.images["%s.%d"%(name,a)] = img2,r

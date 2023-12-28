@@ -334,7 +334,7 @@ class _Table_td(container.Container):
 
         dx = width-w.rect.w
         dy = height-w.rect.h
-        w.rect.x = (self.style.align+1)*dx/2
-        w.rect.y = (self.style.valign+1)*dy/2
+        w.rect.x = (self.style.align+1)*dx//2
+        w.rect.y = (self.style.valign+1)*dy//2
 
         return width, height

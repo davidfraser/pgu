@@ -123,7 +123,7 @@ def render(dt):
 
     colors = []
     for i in range(256,0,-1):
-        colors.append((color[0]*i/256,color[1]*i/256,color[2]*i/256))
+        colors.append((color[0]*i//256,color[1]*i//256,color[2]*i//256))
         
     n = 0
     for x,y,z in stars:
