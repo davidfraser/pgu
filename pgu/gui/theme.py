@@ -105,8 +105,7 @@ class Theme(object):
         fname = os.path.join(dname, "style.ini")
         if os.path.isfile(fname):
             cfg = ConfigParser()
-            f = open(fname, 'r')
-            cfg.read(f)
+            cfg.read(fname)
             for section in cfg.sections():
                 cls = section
                 pcls = ''
